@@ -20,11 +20,10 @@ public class TitlesDispatcher implements Dispatcher
     public String execute(HttpServletRequest request) 
     {
         HttpSession session = request.getSession ();
-        AdmitBookStoreDAO dao = new AdmitBookStoreDAO();
+        String ds = (String)session.getAttribute("ds");
+        AdmitBookStoreDAO dao = new AdmitBookStoreDAO(ds);
         List books = null;
         String nextPage = "/jsp/error.jsp";
-        
-       
         try{
             //System.out.println("inside try block of ShowHomeAO.exe()");
             books = dao.getAllBooks();

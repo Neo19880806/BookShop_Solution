@@ -20,7 +20,8 @@ public class HomeDispatcher implements Dispatcher {
     @Override
     public String execute(HttpServletRequest request) {
         HttpSession session = request.getSession();
-        AdmitBookStoreDAO dao = new AdmitBookStoreDAO();
+        String ds = (String)session.getAttribute("ds");
+        AdmitBookStoreDAO dao = new AdmitBookStoreDAO(ds);
         String nextPage = "";
         try {
             System.out.println("inside try block of ShowHomeAO.exe()");

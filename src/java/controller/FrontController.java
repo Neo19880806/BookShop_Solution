@@ -38,7 +38,9 @@ public class FrontController extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         String requestedAction = request.getParameter("action");
-
+        String ds = this.getInitParameter("url");
+        HttpSession session = request.getSession();
+        session.setAttribute("ds", ds);
         requestedAction = requestedAction==null?"titles":requestedAction;
         
         String nextPage = actions.get(requestedAction).execute(request);
