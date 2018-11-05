@@ -15,8 +15,9 @@
         <table>
             <tr>
                 <td> <h2> Welcome to Tafe SA Book Shop </h2></td>
-                <td> <img src="bookshopimage.png" width="50" heigth="50"/> </td>
+                <td> <img src="./Images/bookshopimage.png" width="50" heigth="50"/> </td>
             </tr>
         </table>
+        <hr>
     </body>
 </html>

@@ -12,6 +12,7 @@
         <title>Footer Page</title>
     </head>
     <body>
+        <hr>
         <table>
             <tr><td><h3>Address: 112 Currie Street Adelaide SA 5000</h3></td></tr>
              <tr><td>Contact: (08)87676565</td></tr>
