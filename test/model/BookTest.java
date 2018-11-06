@@ -38,8 +38,6 @@ public class BookTest extends TestCase {
         String expResult = "1234567";
         String result = instance.getIsbn();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -51,8 +49,6 @@ public class BookTest extends TestCase {
         String expResult = "Book 1";
         String result = instance.getTitle();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -64,8 +60,6 @@ public class BookTest extends TestCase {
         String expResult = "Author 1";
         String result = instance.getAuthor();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -77,8 +71,6 @@ public class BookTest extends TestCase {
         double expResult = 100.00;
         double result = instance.getPrice();
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -86,12 +78,10 @@ public class BookTest extends TestCase {
      */
     public void testToString() {
         System.out.println("toString");
-        Book instance = null;
-        String expResult = "";
+        Book instance = book;
+        String expResult = "Title: " +  instance.getTitle() + "  ";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -99,12 +89,10 @@ public class BookTest extends TestCase {
      */
     public void testGetDollarPrice() {
         System.out.println("getDollarPrice");
-        Book instance = null;
-        String expResult = "";
+        Book instance = book;
+        String expResult = "$100.00";
         String result = instance.getDollarPrice();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

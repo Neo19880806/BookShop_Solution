@@ -25,13 +25,16 @@ public class AddToCartDispatcher implements Dispatcher {
         HttpSession session = request.getSession();
         Map cart = (Map) session.getAttribute("cart");
         String[] selectedBooks = request.getParameterValues("add");
-
+        String[] quantities = request.getParameterValues("quantity");
         //when nothing selected, do nothing
         if (selectedBooks != null) {
             if (cart == null) {
                 cart = new HashMap();
-                for (String isbn : selectedBooks) {
-                    int quantity = Integer.parseInt(request.getParameter("isbn"));
+                for (String info : selectedBooks) {
+                    String[] splits = info.split(",");
+                    String isbn = splits[0];
+                    int pos = Integer.parseInt(splits[1]);
+                    int quantity = Integer.parseInt(quantities[pos - 1]);
                     Book book = this.getBookFromList(isbn, session);
                     CartItem item = new CartItem(book);
                     item.setQuantity(quantity);
@@ -40,8 +43,11 @@ public class AddToCartDispatcher implements Dispatcher {
                 session.setAttribute("cart", cart);
             } // end if
             else {
-                for (String isbn : selectedBooks) {     //Modify a bug here
-                    int quantity = Integer.parseInt(request.getParameter("isbn"));
+                for (String info : selectedBooks) {
+                    String[] splits = info.split(",");
+                    String isbn = splits[0];
+                    int pos = Integer.parseInt(splits[1]);
+                    int quantity = Integer.parseInt(quantities[pos - 1]);
                     if (cart.containsKey(isbn)) {
                         CartItem item = (CartItem) cart.get(isbn);
                         item.setQuantity(quantity);
