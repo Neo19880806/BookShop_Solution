@@ -13,7 +13,8 @@ import utility.AdmitBookStoreDAO;
 
 /**
  *
- * @author Administrator
+ * @author Guojing LIANG
+ * HomeDispatcher
  */
 public class HomeDispatcher implements Dispatcher {
 

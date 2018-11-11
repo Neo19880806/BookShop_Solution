@@ -9,7 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  *
- * @author dalevanh
+ * @author Guojing LIANG
+ * CheckoutDispatcher
  */
 public class CheckoutDispatcher implements Dispatcher {
 

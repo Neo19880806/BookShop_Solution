@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
- *
- * @author Administrator
+ * @author Guojing LIANG
+ * ViewCartDispatcher
  */
 public class ViewCartDispatcher implements Dispatcher {
 

@@ -11,8 +11,8 @@ import javax.servlet.http.HttpSession;
 import utility.AdmitBookStoreDAO;
 
 /**
- *
- * @author dalevanh
+ * @author Guojing LIANG
+ * TitlesDispatcher
  */
 public class TitlesDispatcher implements Dispatcher
 {

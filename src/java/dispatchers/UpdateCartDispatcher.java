@@ -14,8 +14,7 @@ import model.Book;
 import model.CartItem;
 
 /**
- *
- * @author Administrator
+ * @author Guojing LIANG UpdateCartDispatcher
  */
 public class UpdateCartDispatcher implements Dispatcher {
 
@@ -41,7 +40,11 @@ public class UpdateCartDispatcher implements Dispatcher {
             isbn = (String) entry.getKey();
             item = (CartItem) entry.getValue();
             int quantity = Integer.parseInt((request.getParameter(isbn)));
-            item.updateQuantity(quantity);
+            if (quantity <= 0) {
+                cart.remove(item.getBook().getIsbn());
+            } else {
+                item.updateQuantity(quantity);
+            }
         }
         return nextPage;
     }

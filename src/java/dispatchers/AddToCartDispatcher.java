@@ -14,8 +14,8 @@ import model.Book;
 import model.CartItem;
 
 /**
- *
- * @author dalevanh
+ * @author Guojing LIANG
+ * AddToCartDispatcher
  */
 public class AddToCartDispatcher implements Dispatcher {
 

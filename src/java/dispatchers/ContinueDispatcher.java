@@ -9,7 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  *
- * @author Administrator
+ * @author Guojing LIANG
+ * ContinueDispatcher
  */
 public class ContinueDispatcher implements Dispatcher {
 
