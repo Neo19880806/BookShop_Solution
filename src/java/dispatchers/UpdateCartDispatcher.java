@@ -41,7 +41,7 @@ public class UpdateCartDispatcher implements Dispatcher {
             item = (CartItem) entry.getValue();
             int quantity = Integer.parseInt((request.getParameter(isbn)));
             if (quantity <= 0) {
-                cart.remove(item.getBook().getIsbn());
+                cart.remove(isbn);
             } else {
                 item.updateQuantity(quantity);
             }
