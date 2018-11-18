@@ -71,7 +71,6 @@
                 <c:choose>
                     <c:when test='${not empty books}'>
                         <c:forEach var="book" items="${books}">
-                            <c:set var ="position" value='${position + 1}'/>
                             <c:set var="isbn" value='${book.getIsbn()}'/>
                             <c:set var="title" value='${book.getTitle()}'/>
                             <c:set var="author" value='${book.getAuthor()}'/>
@@ -82,7 +81,7 @@
                                 <td width="24%"><c:out value="${author}"/></td>
                                 <td width="13%"><c:out value="${price}"/></td>
                                 <td width="10%"> 
-                                    <select name="quantity" size="1">
+                                    <select name="<c:out value='${isbn}'/>" size="1">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -90,7 +89,7 @@
                                 </td>
                                 <td width="6%"> 
                                     <div align="center"> 
-                                        <input type="checkbox" name="add" value="<c:out value="${isbn},${position}"/>"/>
+                                        <input type="checkbox" name="add" value="<c:out value='${isbn}'/>"/>
                                     </div>
                                 </td>
                             </tr>

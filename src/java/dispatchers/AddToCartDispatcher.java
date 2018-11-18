@@ -14,8 +14,7 @@ import model.Book;
 import model.CartItem;
 
 /**
- * @author Guojing LIANG
- * AddToCartDispatcher
+ * @author Guojing LIANG AddToCartDispatcher
  */
 public class AddToCartDispatcher implements Dispatcher {
 
@@ -30,11 +29,8 @@ public class AddToCartDispatcher implements Dispatcher {
         if (selectedBooks != null) {
             if (cart == null) {
                 cart = new HashMap();
-                for (String info : selectedBooks) {
-                    String[] splits = info.split(",");
-                    String isbn = splits[0];
-                    int pos = Integer.parseInt(splits[1]);
-                    int quantity = Integer.parseInt(quantities[pos - 1]);
+                for (String isbn : selectedBooks) {
+                    int quantity = Integer.parseInt(request.getParameter(isbn));
                     Book book = this.getBookFromList(isbn, session);
                     CartItem item = new CartItem(book);
                     item.setQuantity(quantity);
@@ -43,11 +39,8 @@ public class AddToCartDispatcher implements Dispatcher {
                 session.setAttribute("cart", cart);
             } // end if
             else {
-                for (String info : selectedBooks) {
-                    String[] splits = info.split(",");
-                    String isbn = splits[0];
-                    int pos = Integer.parseInt(splits[1]);
-                    int quantity = Integer.parseInt(quantities[pos - 1]);
+                for (String isbn : selectedBooks) {
+                    int quantity = Integer.parseInt(request.getParameter(isbn));
                     if (cart.containsKey(isbn)) {
                         CartItem item = (CartItem) cart.get(isbn);
                         item.setQuantity(quantity);

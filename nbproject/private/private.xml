@@ -4,17 +4,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/Development/BookShop_Solution/src/java/utility/AdmitBookStoreDAO.java</file>
-            <file>file:/F:/Development/BookShop_Solution/src/java/dispatchers/UpdateCartDispatcher.java</file>
-            <file>file:/F:/Development/BookShop_Solution/src/java/model/Book.java</file>
-            <file>file:/F:/Development/BookShop_Solution/web/jsp/checkout.jsp</file>
-            <file>file:/F:/Development/BookShop_Solution/web/jsp/cart.jsp</file>
-            <file>file:/F:/Development/BookShop_Solution/test/model/BookTest.java</file>
-            <file>file:/F:/Development/BookShop_Solution/src/java/dispatchers/CheckoutDispatcher.java</file>
             <file>file:/F:/Development/BookShop_Solution/src/java/controller/FrontController.java</file>
-            <file>file:/F:/Development/BookShop_Solution/src/java/dispatchers/ViewCartDispatcher.java</file>
+            <file>file:/F:/Development/BookShop_Solution/web/jsp/titles.jsp</file>
+            <file>file:/F:/Development/BookShop_Solution/src/java/model/Book.java</file>
+            <file>file:/F:/Development/BookShop_Solution/src/java/dispatchers/CheckoutDispatcher.java</file>
             <file>file:/F:/Development/BookShop_Solution/src/java/dispatchers/ContinueDispatcher.java</file>
             <file>file:/F:/Development/BookShop_Solution/src/java/dispatchers/TitlesDispatcher.java</file>
+            <file>file:/F:/Development/BookShop_Solution/test/model/BookTest.java</file>
+            <file>file:/F:/Development/BookShop_Solution/src/java/dispatchers/UpdateCartDispatcher.java</file>
+            <file>file:/F:/Development/BookShop_Solution/src/java/dispatchers/ViewCartDispatcher.java</file>
+            <file>file:/F:/Development/BookShop_Solution/web/jsp/cart.jsp</file>
+            <file>file:/F:/Development/BookShop_Solution/src/java/utility/AdmitBookStoreDAO.java</file>
+            <file>file:/F:/Development/BookShop_Solution/web/jsp/checkout.jsp</file>
             <file>file:/F:/Development/BookShop_Solution/src/java/dispatchers/AddToCartDispatcher.java</file>
         </group>
     </open-files>
