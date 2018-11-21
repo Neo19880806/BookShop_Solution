@@ -122,7 +122,7 @@
                     <td>
                         <input type="text" name="amount" value=
                                <fmt:setLocale value="en-US"/>
-                               <fmt:formatNumber value = "${totalOrderInDollars}" type="currency"/>
+                               <fmt:formatNumber value = "${totalCostOfOrder}" type="currency"/>
                                />
                     </td>
                 </tr>
